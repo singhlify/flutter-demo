@@ -47,6 +47,15 @@
       ]
     },
     {
+      "name": "window_manager",
+      "version": "0.3.9",
+      "dependencies": [
+        "flutter",
+        "path",
+        "screen_retriever"
+      ]
+    },
+    {
       "name": "provider",
       "version": "6.1.5+1",
       "dependencies": [
@@ -214,6 +223,13 @@
         "stream_channel",
         "string_scanner",
         "term_glyph"
+      ]
+    },
+    {
+      "name": "screen_retriever",
+      "version": "0.1.9",
+      "dependencies": [
+        "flutter"
       ]
     },
     {
@@ -682,22 +698,6 @@
       "version": "1.4.0",
       "dependencies": [
         "collection"
-      ]
-    },
-    {
-      "name": "window_manager",
-      "version": "0.3.9",
-      "dependencies": [
-        "flutter",
-        "path",
-        "screen_retriever"
-      ]
-    },
-    {
-      "name": "screen_retriever",
-      "version": "0.1.9",
-      "dependencies": [
-        "flutter"
       ]
     }
   ],
