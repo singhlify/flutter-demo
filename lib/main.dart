@@ -5,6 +5,7 @@ import 'app/platform/window_setup.dart';
 import 'shared/utils/logging.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   log('main: starting application');
   await windowSetup();
   runApp(const App());
