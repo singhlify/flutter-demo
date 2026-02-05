@@ -2,11 +2,11 @@ import 'package:flutter/widgets.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:provider/provider.dart';
 
-import '../shared/utils/logging.dart';
-import '../shared/utils/shortcuts.dart';
 import '../features/editor/document/document_controller.dart';
-import '../features/editor/editor_screen.dart';
+import '../features/editor/ribbon/ribbon.dart';
+import '../features/editor/page_canvas.dart';
 import '../ribbon/commands.dart';
+import '../shared/utils/shortcuts.dart';
 import '../state/ribbon_state.dart';
 import 'title_bar.dart';
 import 'status_bar.dart';
@@ -17,7 +17,6 @@ class WordShell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log('WordShell: building');
     return Shortcuts(
       shortcuts: <ShortcutActivator, Intent>{
         boldShortcut: const BoldIntent(),
@@ -66,7 +65,10 @@ class _WordShellBody extends StatelessWidget {
     return Column(
       children: [
         const TitleBar(),
-        const EditorScreen(),
+        const Ribbon(),
+        const Expanded(
+          child: PageCanvas(),
+        ),
         const StatusBar(),
       ],
     );

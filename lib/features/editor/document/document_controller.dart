@@ -27,8 +27,7 @@ class DocumentController extends ChangeNotifier {
 
   Document _createSampleDocument() {
     return Document.fromJson([
-      {'insert': 'Welcome to Word Ribbon PoC\n'},
-      {'insert': 'Type here and use the ribbon to format your text. Try bold, italic, underline, alignment, and bullets.\n'},
+      {'insert': '\n'},
     ]);
   }
 
