@@ -1,2 +1,2 @@
-/// Word-style ribbon. Uses Material on web, Fluent/Macos on native.
-export 'ribbon_web.dart' if (dart.library.io) 'ribbon_native.dart';
+/// Word-style ribbon - Fluent UI everywhere.
+export 'ribbon_web.dart';

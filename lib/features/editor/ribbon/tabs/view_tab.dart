@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:fluent_ui/fluent_ui.dart';
 
+import '../../../../shared/word_icons.dart';
 import '../components/ribbon_group.dart';
-import '../../../../shared/widgets/adaptive/adaptive_button.dart';
 
 /// View tab: Zoom, Ruler (stubs).
 class ViewTab extends StatelessWidget {
@@ -17,8 +18,8 @@ class ViewTab extends StatelessWidget {
           RibbonGroup(
             label: 'View',
             children: [
-              AdaptiveButton(icon: Icon(Icons.zoom_in), onPressed: () {}, tooltip: 'Zoom'),
-              AdaptiveButton(icon: Icon(Icons.straighten), onPressed: () {}, tooltip: 'Ruler'),
+              Tooltip(message: 'Zoom', child: IconButton(icon: Icon(WordIcons.search), onPressed: () {}, iconButtonMode: IconButtonMode.small)),
+              Tooltip(message: 'Page view', child: IconButton(icon: Icon(WordIcons.pageList), onPressed: () {}, iconButtonMode: IconButtonMode.small)),
             ],
           ),
         ],

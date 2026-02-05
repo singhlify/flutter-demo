@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:fluent_ui/fluent_ui.dart';
 
+import '../../../../shared/word_icons.dart';
 import '../components/ribbon_group.dart';
-import '../../../../shared/widgets/adaptive/adaptive_button.dart';
 
 /// Layout tab: Margins, Orientation (stubs).
 class LayoutTab extends StatelessWidget {
@@ -17,8 +18,8 @@ class LayoutTab extends StatelessWidget {
           RibbonGroup(
             label: 'Page Setup',
             children: [
-              AdaptiveButton(icon: Icon(Icons.margin), onPressed: () {}, tooltip: 'Margins'),
-              AdaptiveButton(icon: Icon(Icons.swap_horiz), onPressed: () {}, tooltip: 'Orientation'),
+              Tooltip(message: 'Margins', child: IconButton(icon: Icon(WordIcons.page), onPressed: () {}, iconButtonMode: IconButtonMode.small)),
+              Tooltip(message: 'Orientation', child: IconButton(icon: Icon(WordIcons.orientation), onPressed: () {}, iconButtonMode: IconButtonMode.small)),
             ],
           ),
         ],

@@ -13,4 +13,7 @@ class Tokens {
 
   static const double pageWidth = 612.0;
   static const double pagePadding = 48.0;
+  static const double rulerPlaceholderHeight = 24.0;
+  static const double ribbonGroupSeparatorWidth = 1.0;
+  static const double statusBarZoomSliderWidth = 120.0;
 }

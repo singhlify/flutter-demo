@@ -1,0 +1,1 @@
+ /home/gurjot/ansys/word_ribbon_poc/build/web/manifest.json:  /home/gurjot/ansys/word_ribbon_poc/web/manifest.json /home/gurjot/ansys/word_ribbon_poc/web/index.html

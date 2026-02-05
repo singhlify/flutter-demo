@@ -8,12 +8,13 @@
       "version": "1.0.0+1",
       "dependencies": [
         "fluent_ui",
+        "fluentui_system_icons",
         "flutter",
         "flutter_localizations",
         "flutter_quill",
         "go_router",
-        "macos_ui",
-        "provider"
+        "provider",
+        "window_manager"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -87,15 +88,10 @@
       ]
     },
     {
-      "name": "macos_ui",
-      "version": "2.2.2",
+      "name": "fluentui_system_icons",
+      "version": "1.1.273",
       "dependencies": [
-        "appkit_ui_element_colors",
-        "equatable",
-        "flutter",
-        "gradient_borders",
-        "macos_window_utils",
-        "vector_math"
+        "flutter"
       ]
     },
     {
@@ -339,37 +335,6 @@
         "collection",
         "diff_match_patch",
         "quiver"
-      ]
-    },
-    {
-      "name": "equatable",
-      "version": "2.0.8",
-      "dependencies": [
-        "collection",
-        "meta"
-      ]
-    },
-    {
-      "name": "appkit_ui_element_colors",
-      "version": "1.0.1",
-      "dependencies": [
-        "equatable",
-        "flutter",
-        "plugin_platform_interface"
-      ]
-    },
-    {
-      "name": "gradient_borders",
-      "version": "1.0.2",
-      "dependencies": [
-        "flutter"
-      ]
-    },
-    {
-      "name": "macos_window_utils",
-      "version": "1.9.1",
-      "dependencies": [
-        "flutter"
       ]
     },
     {
@@ -634,13 +599,6 @@
       "dependencies": []
     },
     {
-      "name": "plugin_platform_interface",
-      "version": "2.1.8",
-      "dependencies": [
-        "meta"
-      ]
-    },
-    {
       "name": "petitparser",
       "version": "6.1.0",
       "dependencies": [
@@ -685,6 +643,13 @@
       ]
     },
     {
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
+      "dependencies": [
+        "meta"
+      ]
+    },
+    {
       "name": "http",
       "version": "1.6.0",
       "dependencies": [
@@ -717,6 +682,22 @@
       "version": "1.4.0",
       "dependencies": [
         "collection"
+      ]
+    },
+    {
+      "name": "window_manager",
+      "version": "0.3.9",
+      "dependencies": [
+        "flutter",
+        "path",
+        "screen_retriever"
+      ]
+    },
+    {
+      "name": "screen_retriever",
+      "version": "0.1.9",
+      "dependencies": [
+        "flutter"
       ]
     }
   ],

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/services.dart' show LogicalKeyboardKey;
+import 'package:flutter/widgets.dart' show ShortcutActivator, SingleActivator, Intent;
 
 import 'platform.dart';
 

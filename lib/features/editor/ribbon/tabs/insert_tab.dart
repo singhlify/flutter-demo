@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
+import '../../../../shared/word_icons.dart';
 import '../components/ribbon_group.dart';
-import '../../../../shared/widgets/adaptive/adaptive_button.dart';
+import 'package:fluent_ui/fluent_ui.dart';
 
 /// Insert tab: Picture, Table, Link (stubs).
 class InsertTab extends StatelessWidget {
@@ -17,9 +18,9 @@ class InsertTab extends StatelessWidget {
           RibbonGroup(
             label: 'Insert',
             children: [
-              AdaptiveButton(icon: Icon(Icons.image), onPressed: () {}, tooltip: 'Picture'),
-              AdaptiveButton(icon: Icon(Icons.table_chart), onPressed: () {}, tooltip: 'Table'),
-              AdaptiveButton(icon: Icon(Icons.link), onPressed: () {}, tooltip: 'Link'),
+              Tooltip(message: 'Picture', child: IconButton(icon: Icon(WordIcons.image), onPressed: () {}, iconButtonMode: IconButtonMode.small)),
+              Tooltip(message: 'Table', child: IconButton(icon: Icon(WordIcons.table), onPressed: () {}, iconButtonMode: IconButtonMode.small)),
+              Tooltip(message: 'Link', child: IconButton(icon: Icon(WordIcons.link), onPressed: () {}, iconButtonMode: IconButtonMode.small)),
             ],
           ),
         ],

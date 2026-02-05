@@ -1,2 +1,13 @@
-/// App entry. Uses Material-only on web, platform shells on native.
-export 'app_web.dart' if (dart.library.io) 'app_native.dart';
+import 'package:flutter/widgets.dart';
+
+import 'platform/windows_shell.dart';
+
+/// Single FluentApp entry - used everywhere (web, Windows, macOS, Linux).
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const WindowsShell();
+  }
+}

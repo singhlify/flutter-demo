@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 
 import '../../../shared/utils/logging.dart';
-import 'commands.dart';
+import '../../../ribbon/commands.dart';
 
 /// Wraps QuillController and exposes formatting commands.
 class DocumentController extends ChangeNotifier {
@@ -53,6 +54,16 @@ class DocumentController extends ChangeNotifier {
           Attribute.fromKeyValue(Attribute.size.key, size) ?? Attribute.size,
           shouldNotifyListeners: true,
         );
+      case FontFamilyCommand(:final fontFamily):
+        _controller.formatSelection(
+          Attribute.fromKeyValue(Attribute.font.key, fontFamily) ?? Attribute.font,
+          shouldNotifyListeners: true,
+        );
+      case FontColorCommand(:final colorValue):
+        _controller.formatSelection(
+          Attribute.fromKeyValue(Attribute.color.key, colorValue) ?? Attribute.color,
+          shouldNotifyListeners: true,
+        );
       case AlignmentCommand(:final align):
         final attr = switch (align) {
           TextAlign.left => Attribute.leftAlignment,
@@ -64,10 +75,22 @@ class DocumentController extends ChangeNotifier {
         _controller.formatSelection(attr, shouldNotifyListeners: true);
       case BulletsCommand():
         _toggleAttribute(Attribute.ul);
+      case StyleCommand(:final style):
+        _applyStyle(style);
       case UndoCommand():
         undo();
       case RedoCommand():
         redo();
+    }
+  }
+
+  void _applyStyle(String style) {
+    if (style == 'h1') {
+      _controller.formatSelection(Attribute.fromKeyValue(Attribute.header.key, 1) ?? Attribute.header, shouldNotifyListeners: true);
+    } else if (style == 'h2') {
+      _controller.formatSelection(Attribute.fromKeyValue(Attribute.header.key, 2) ?? Attribute.header, shouldNotifyListeners: true);
+    } else {
+      _controller.formatSelection(Attribute.fromKeyValue(Attribute.header.key, null) ?? Attribute.header, shouldNotifyListeners: true);
     }
   }
 
